@@ -1,0 +1,34 @@
+<html>
+<head>
+	<title>Interface fiddle</title>
+</head>
+<body>
+
+	<script src = "Interface.js" ></script>
+	<script>
+		// Example implementation
+		var testInterface  = new Interface('test', [
+				'getName',
+				'getAge'
+			]);
+
+		var Person = Interface.extends( testInterface );
+
+		_extend(Person.prototype, {
+			getName : function(){
+				return this.name;
+			},
+			getAge: function(){
+				return this.age;
+			}
+		});
+			person = new Person({
+				name : 'vijay',
+				age : 24
+			});
+			
+
+
+	</script>
+</body>
+</html>
